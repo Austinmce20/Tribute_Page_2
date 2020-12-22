@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background: #f2f2f2;
+}
+
+figure {
+    text-align: center;
+}
+figcaption {
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: large;
+}
+
+
+.text-wrap {
+    max-width: 80vw;
+    width: 60vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-wrap p {
+    font-size: 14px;
+}
+article {
+    margin-bottom: 20px;
+}
+
+.navBar {
+}
+.navBar ul {
+    position: fixed;
+    left: 0px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.navBar li {
+    list-style: none;
+    border: 3px solid red;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    margin: 5px;
+}
+.navBar a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: x-large;
+    color: #111111;
+}
+
+
+button {
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 60vw;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.content {
+    padding: 0 10px;
+    display: inline;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+.collapsible:after {
+    content: '\02795';
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.active:after {
+    content: "\2796";
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #212121;
+        color: #ccc;
+    }
+    .collapsible {
+        background-color: #323f4b;
+        color: white;
+    }
+    .navBar li {
+    border: 3px solid #bdbdbd;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    margin: 5px;
+    background-color: #323f4b;
+    }
+    .navBar a {
+        color: white;
+    }
+    figcaption > a {
+        color: white;
+    }
+    p > a {
+        color: white;
+    }
+
+    .collapsible:after {
+        content: '\02795';
+        font-size: 13px;
+        color: black;
+        float: right;
+        margin-left: 5px;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .active:after {
+        content: "\2796";
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .navBar {
+        margin-bottom: 45px;
+        top: 0;
+    }
+    .navBar ul {
+        margin: 0;
+        width: 100vw;
+        text-align: center;
+        background-color: #323f4b;
+        height: 4.5vh;
+        opacity: .8;
+    }
+    .navBar li {
+        display: inline;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 3px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .text-wrap {
+        width: 55vw;
+    }
+    .collapsible {
+        width: 55vw;
+    }
+}
