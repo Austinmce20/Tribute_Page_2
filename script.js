@@ -14,8 +14,9 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
-function darkMode () {
-    var dark = document.body;
-    Element.classList.toggle("dark-mode");
-}
+const checkbox = document.getElementById('checkbox');
 
+checkbox.addEventListener('change', () => {
+  // change the theme of the website
+  document.body.classList.toggle('dark');
+})
