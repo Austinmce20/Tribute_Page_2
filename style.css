@@ -22,6 +22,7 @@ body.dark {
 body.dark  > .collapsible {
     background-color: #323f4b;
     color: white;
+    transition: all .2s ease-in-out;
 }
 body.dark > .navBar li{
     border: 3px solid #bdbdbd;
@@ -29,7 +30,7 @@ body.dark > .navBar li{
     border-right: none;
     text-align: center;
     margin: 5px;
-    background-color: #323f4b;
+    
 }
 body.dark > .navBar a {
     color: white;
@@ -78,7 +79,7 @@ body.dark .active:after {
 .checkbox{
     opacity: 0;
     position: absolute;
-  }
+}
   
   
 .ball {
@@ -131,15 +132,13 @@ article {
     margin-bottom: 20px;
 }
 
-.navBar {
-    
-}
+
 .navBar ul {
     position: fixed;
     left: 0px;
-    margin-left: 69px;
-    margin-top: 59px;
-    transform: scale(2);
+    margin-left: 29px;
+    margin-top: 3%;
+    transform: scale(1.25);
 }
 .navBar li {
     list-style: none;
@@ -164,8 +163,8 @@ button {
 
 
 .collapsible {
-    background-color: #eee;
-    color: #444;
+    background-color: #C70039;
+    color: #eee;
     cursor: pointer;
     padding: 18px;
     width: 60vw;
@@ -173,31 +172,32 @@ button {
     text-align: left;
     outline: none;
     font-size: 15px;
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
 }
 
 .active, .collapsible:hover {
-    background-color: #ccc;
+    background-color: #ABB2B9;
+    transform: scale(1.02);
 }
 
 .content {
     padding: 0 10px;
     display: inline;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: black;
 }
 .collapsible:after {
     content: '\02795';
-    font-size: 13px;
-    color: white;
-    float: right;
-    margin-left: 5px;
-    padding-bottom: 10px;
     font-weight: bold;
+    background-color: black;
+    color: black;
+    float: right;
 }
+
 
 .active:after {
     content: "\2796";
-    padding-bottom: 10px;
     font-weight: bold;
 }
 
@@ -208,25 +208,19 @@ button {
         margin: 0%;
     }
     .navBar {
-        margin-top: -10px;
-        margin-bottom: 65px;
-        top: 0;
+        display: none;
     }
-    .navBar ul {
-        margin: 0;
-        width: 100vw;
-        text-align: center;
-        background-color: #323f4b;
-        height: 4.5vh;
-        opacity: .9;
-        padding-top: 5px;
+
+
+    .collapsible {
+        width: 60vw;
     }
-    .navBar li {
-        display: inline;
-        margin-bottom: 10px;
-        text-align: center;
-        padding: 3px;
+    
+    .text-wrap p {
+        font-size: 20px;
+        width: 60vw;
     }
+
     .label {
         height: 50px;
         width: 15px;
@@ -256,17 +250,17 @@ button {
 }
 @media only screen and (max-width: 1200px) {
     .text-wrap {
-        width: 55vw;
+        width: 50vw;
     }
     .collapsible {
-        width: 55vw;
+        width: 50vw;
     }
     .navBar ul {
         position: fixed;
         left: 0px;
-        margin-left: 15px;
-        margin-top: 15px;
-        transform: scale(1.25);
+        margin-left: 5px;
+        margin-top: 3%;
+        transform: scale(.95);
     }
 
 }
